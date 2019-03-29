@@ -1,12 +1,13 @@
 import React from "react";
 import FoodSummary from "./FoodSummary";
 
-const FoodList = () => {
+const FoodList = ({ foods }) => {
   return (
     <div className="project-list section">
-      <FoodSummary />
-      <FoodSummary />
-      <FoodSummary />
+      {foods &&
+        foods.map(food => {
+          return <FoodSummary food={food} key={food.id} />;
+        })}
     </div>
   );
 };
