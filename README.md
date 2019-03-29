@@ -11,3 +11,4 @@ O MyFitnessPal está poluído com alimentos incorretos e por isso não está sen
 
 # Documentação da API externa
 [Documentação da API externa](https://taco-food-api.herokuapp.com/)
+<a href="https://taco-food-api.herokuapp.com/" target="_blank">Documentação da API Externa</a>
