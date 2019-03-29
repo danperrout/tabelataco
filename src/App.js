@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/dashboard/Dashboard";
+import FoodDetails from "./components/foods/FoodDetails";
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route path="/" component={Dashboard} />
+            <Route path="/food/:id" component={FoodDetails} />
+            <Route exact path="/" component={Dashboard} />
           </Switch>
         </div>
       </BrowserRouter>
