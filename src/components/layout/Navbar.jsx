@@ -9,8 +9,13 @@ const Navbar = () => {
         <Link to="/" className="brand-logo">
           Tabela TACO
         </Link>
-        <SignedInLinks />
-        <SignedOutLinks />
+        <ul className="right">
+          <li>
+            <a href="https://github.com/danperrout/tabelataco" target="_blank">
+              Documentação
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );

@@ -5,6 +5,11 @@ const SignedInLinks = () => {
   return (
     <ul className="right">
       <li>
+        <a href="https://github.com/danperrout/tabelataco" target="_blank">
+          Documentação
+        </a>
+      </li>
+      <li>
         <NavLink to="/">Novo Projeto</NavLink>
       </li>
       <li>
