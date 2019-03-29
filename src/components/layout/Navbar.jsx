@@ -12,7 +12,12 @@ const Navbar = () => {
         <ul className="right">
           <li>
             <a href="https://github.com/danperrout/tabelataco" target="_blank">
-              Documentação
+              Repositório do Projeto
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://taco-food-api.herokuapp.com/">
+              Documentação da API
             </a>
           </li>
         </ul>
