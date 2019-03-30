@@ -10,5 +10,5 @@ O objetivo deste app é permitir a consulta rápida, prática e correta dos alim
 O MyFitnessPal está poluído com alimentos incorretos e por isso não está sendo uma fonte confiável para pessoas que desejam fazer "dieta limpa".
 
 # JSON
-O JSON formato foi retirado do seguinte [repositório](https://github.com/raulfdm/taco-api).
+O JSON formatado foi retirado do seguinte [repositório](https://github.com/raulfdm/taco-api).
 
