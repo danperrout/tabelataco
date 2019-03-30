@@ -19,15 +19,6 @@ const Navbar = () => {
               Repositório do Projeto
             </a>
           </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://taco-food-api.herokuapp.com/"
-              rel="noopener noreferrer"
-            >
-              Documentação da API
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

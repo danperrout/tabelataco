@@ -14,9 +14,7 @@ class Dashboard extends Component {
             <div className="col s12 m6">
               {isLoaded ? <FoodList foods={foods} /> : "Carregando..."}
             </div>
-            <div className="col s12 m5 offet-m1">
-              <GithubData />
-            </div>
+            <div className="col s12 m5 offet-m1" />
           </div>
         </div>
       </React.Fragment>
