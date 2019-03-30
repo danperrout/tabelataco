@@ -5,7 +5,11 @@ const SignedInLinks = () => {
   return (
     <ul className="right">
       <li>
-        <a href="https://github.com/danperrout/tabelataco" target="_blank">
+        <a
+          href="https://github.com/danperrout/tabelataco"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Documentação
         </a>
       </li>

@@ -1,33 +1,34 @@
 import React, { Component } from "react";
-import Notifications from "./Notifications";
 import FoodList from "../foods/FoodList";
 import { connect } from "react-redux";
+import GithubData from "./GithubData";
 
 class Dashboard extends Component {
   state = {};
   render() {
-    const { foods } = this.props;
-
+    const { foods, isLoaded } = this.props;
     return (
       <React.Fragment>
         <div className="dashboard container">
           <div className="row">
             <div className="col s12 m6">
-              <FoodList foods={foods} />
+              {isLoaded ? <FoodList foods={foods} /> : "Carregando..."}
             </div>
             <div className="col s12 m5 offet-m1">
-              <Notifications />
+              <GithubData />
             </div>
           </div>
         </div>
       </React.Fragment>
     );
   }
+  componentDidMount() {}
 }
 
 const mapStateToProps = state => {
   return {
-    foods: state.food.foods
+    foods: state.food.foods,
+    isLoaded: state.food.isLoaded
   };
 };
 
