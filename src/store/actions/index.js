@@ -27,9 +27,20 @@ export const fetchGithubData = () => {
 
 export const fetchFoodData = () => {
   return dispatch => {
+    //Verifica se os alimentos já existem na máquina
+    const tabelaLocal = localStorage.getItem("tabelataco");
+    if (tabelaLocal) {
+      console.log("JSON encontrado");
+      return dispatch({
+        type: FETCH_FOOD_DATA,
+        payload: JSON.parse(tabelaLocal)
+      });
+    }
     return axios
       .get("../TACO.json")
       .then(response => {
+        console.log("Buscando JSON no servidor...");
+        localStorage.setItem("tabelataco", JSON.stringify(response.data));
         dispatch({
           type: FETCH_FOOD_DATA,
           payload: response.data

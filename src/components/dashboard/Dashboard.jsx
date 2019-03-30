@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import FoodList from "../foods/FoodList";
 import { connect } from "react-redux";
-import GithubData from "./GithubData";
 
 class Dashboard extends Component {
   state = {};
