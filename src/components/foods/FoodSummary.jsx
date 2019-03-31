@@ -5,8 +5,7 @@ class FoodSummary extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageEnd:
-        "http://2.bp.blogspot.com/-5DR0FBaig9w/Uc3nFVASYiI/AAAAAAAADr8/kkPyN2yspOw/s232/null-value.gif"
+      imageEnd: "http://www.devsanon.com/wp-content/uploads/2015/12/null.png"
     };
   }
 
@@ -17,7 +16,6 @@ class FoodSummary extends Component {
     ).then(res => res[0]);
 
     imageWeb.then(v => {
-      console.log(v);
       this.setState({
         ...this.state,
         imageEnd: v
@@ -33,7 +31,7 @@ class FoodSummary extends Component {
         <div className="card-image">
           {this.state.imageEnd && (
             <img
-              style={{ width: 100, height: 100 }}
+              style={{ width: "100%", height: "100%" }}
               src={this.state.imageEnd}
               alt={food.description}
             />
