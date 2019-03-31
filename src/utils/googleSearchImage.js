@@ -1,7 +1,3 @@
-//
-// Copyright (c) 2017 by Fedir Bobylev. All Rights Reserved.
-//
-
 export default class GoogleImageSearch {
   /**
    * Function for image search
@@ -15,7 +11,7 @@ export default class GoogleImageSearch {
     return new Promise((resolve, reject) => {
       // Fetches Items from Google Image Search URL
       fetch(
-        "https://cors-anywhere.herokuapp.com/https://www.google.com/search?source=lnms&sa=X&gbv=1&tbm=isch&q=" +
+        "https://cors-anywhere.herokuapp.com/https://www.google.com.br/search?source=lnms&sa=X&gbv=1&tbm=isch&q=" +
           query
       )
         .then(res => res.text())
