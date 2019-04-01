@@ -27,7 +27,6 @@ export const fetchGithubData = () => {
 
 export const filterFood = newFoodList => {
   return dispatch => {
-    console.log(newFoodList.length);
     return dispatch({
       type: FILTER_FOOD,
       payload: newFoodList

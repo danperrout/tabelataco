@@ -4,35 +4,45 @@ import { filterFood } from "../../store/actions";
 import SearchBox from "./searchBox";
 
 class Filtro extends Component {
-  state = { searchQuery: "" };
+  state = { searchQuery: "", groupSearch: [] };
 
   handleSearch = query => {
+    const groupSearch = query.split(" ");
     this.setState({
-      searchQuery: query
-      //selectedGenre: null,
-      //currentPage: 1
+      ...this.state,
+      searchQuery: query,
+      groupSearch
     });
-    this.getPagedData(query);
+
+    this.getPagedData(query, groupSearch);
   };
 
-  getPagedData = () => {
-    const { searchQuery } = this.state;
-
-    console.log(searchQuery);
+  getPagedData = (query, groupSearch) => {
+    const searchQuery = query;
     let filteredFoods = this.props.foods;
 
-    if (searchQuery)
-      filteredFoods = this.props.foods.filter(m =>
-        m.description.toLowerCase().includes(searchQuery.toLowerCase())
+    groupSearch.map(x => {
+      filteredFoods = filteredFoods.filter(m =>
+        m.description.toLowerCase().includes(x.toLowerCase())
       );
+      return this.props.filterFood(filteredFoods);
+    });
 
-    console.log(filteredFoods.length);
-    this.props.filterFood(filteredFoods);
+    if (searchQuery === "") {
+      filteredFoods = this.props.foods;
+      this.props.filterFood(filteredFoods);
+    }
   };
 
   render() {
-    const { searchQuery } = this.state;
-    return <SearchBox value={searchQuery} onChange={this.handleSearch} />;
+    const { searchQuery, groupSearch } = this.state;
+    return (
+      <div>
+        <SearchBox value={searchQuery} onChange={this.handleSearch} />
+        Termos buscados:
+        <ul>{groupSearch.map(x => x)}</ul>
+      </div>
+    );
   }
 }
 const mapStateToProps = state => {
