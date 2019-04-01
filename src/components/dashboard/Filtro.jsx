@@ -40,9 +40,9 @@ class Filtro extends Component {
       <div>
         <SearchBox value={searchQuery} onChange={this.handleSearch} />
         Termos buscados:
-        <ul>
+        <ul className="collection">
           {groupSearch.map(d => (
-            <li key={d} value={d}>
+            <li className="collection-item" key={d} value={d}>
               {d}
             </li>
           ))}
