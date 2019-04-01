@@ -36,19 +36,28 @@ class Filtro extends Component {
 
   render() {
     const { searchQuery, groupSearch } = this.state;
-    return (
-      <div>
-        <SearchBox value={searchQuery} onChange={this.handleSearch} />
-        Termos buscados:
-        <ul className="collection">
-          {groupSearch.map(d => (
-            <li className="collection-item" key={d} value={d}>
-              {d}
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+
+    if (groupSearch.length > 0) {
+      return (
+        <div>
+          <SearchBox value={searchQuery} onChange={this.handleSearch} />
+          Termos buscados:
+          <ul className="collection">
+            {groupSearch.map(d => (
+              <li className="collection-item" key={d} value={d}>
+                {d}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <SearchBox value={searchQuery} onChange={this.handleSearch} />
+        </div>
+      );
+    }
   }
 }
 const mapStateToProps = state => {
