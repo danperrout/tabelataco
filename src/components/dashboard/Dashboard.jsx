@@ -19,6 +19,10 @@ class Dashboard extends Component {
               )}
             </div>
             <div className="col s12 m5 offet-m1">
+              <blockquote>
+                Busque pelos alimentos presentes na tabela TACO. <br />O app
+                mostrará no máximo 10 alimentos por vez.
+              </blockquote>
               <Filtro />
             </div>
           </div>

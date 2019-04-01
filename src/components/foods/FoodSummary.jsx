@@ -35,15 +35,16 @@ class FoodSummary extends Component {
 
     return (
       <div className="card z-depth-0 project-summary">
-        <div className="card-image">
-          {this.state.imageEnd && (
-            <img
-              style={{ width: "100%", height: "100%" }}
-              src={this.state.imageEnd}
-              alt={food.description}
-            />
-          )}
-        </div>
+        {this.state.imageEnd && (
+          <div
+            className="card-image"
+            style={{
+              width: "100%",
+              height: "150px",
+              backgroundImage: `url(${this.state.imageEnd})`
+            }}
+          />
+        )}
         <div className="card-content grey-text text-darken-3">
           <span className="card-title">{food.description}</span>
           <p>
