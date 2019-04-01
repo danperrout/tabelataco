@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import GoogleImageSearch from "../../utils/googleSearchImage";
+import withUnmounted from "@ishawnwang/withunmounted";
 
 class FoodSummary extends Component {
+  hasUnmounted = false;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -16,6 +19,10 @@ class FoodSummary extends Component {
     ).then(res => res[0]);
 
     imageWeb.then(v => {
+      if (this.hasUnmounted) {
+        //console.log("Tentou renderizar com componente destruído.");
+        return;
+      }
       this.setState({
         ...this.state,
         imageEnd: v
@@ -54,4 +61,4 @@ class FoodSummary extends Component {
   }
 }
 
-export default FoodSummary;
+export default withUnmounted(FoodSummary);
