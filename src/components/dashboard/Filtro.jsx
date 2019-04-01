@@ -33,9 +33,6 @@ class Filtro extends Component {
       this.props.filterFood(filteredFoods);
     }
   };
-  handleDelete = value => event => {
-    console.log(value);
-  };
 
   render() {
     const { searchQuery, groupSearch } = this.state;
@@ -46,13 +43,7 @@ class Filtro extends Component {
         <ul>
           {groupSearch.map(d => (
             <li key={d} value={d}>
-              {d}{" "}
-              <button
-                onClick={this.handleDelete(d)}
-                className="btn btn-small red"
-              >
-                X
-              </button>
+              {d}
             </li>
           ))}
         </ul>
