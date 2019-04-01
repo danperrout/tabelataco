@@ -11,8 +11,8 @@ const FoodList = ({ foods, originalFoods }) => {
 
   return (
     <div className="project-list section">
-      Foram carregados {originalFoods.length} alimentos. Mostrando{" "}
-      {items.length} alimentos.
+      Foram carregados {originalFoods.length} alimentos da base de dados.
+      Mostrando {items.length} alimentos.
       {items}
     </div>
   );

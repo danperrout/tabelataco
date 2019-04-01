@@ -33,6 +33,9 @@ class Filtro extends Component {
       this.props.filterFood(filteredFoods);
     }
   };
+  handleDelete = value => event => {
+    console.log(value);
+  };
 
   render() {
     const { searchQuery, groupSearch } = this.state;
@@ -40,7 +43,19 @@ class Filtro extends Component {
       <div>
         <SearchBox value={searchQuery} onChange={this.handleSearch} />
         Termos buscados:
-        <ul>{groupSearch.map(x => x)}</ul>
+        <ul>
+          {groupSearch.map(d => (
+            <li key={d} value={d}>
+              {d}{" "}
+              <button
+                onClick={this.handleDelete(d)}
+                className="btn btn-small red"
+              >
+                X
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
