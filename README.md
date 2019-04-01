@@ -1,5 +1,7 @@
-[Liver version](http://tabelataco.herokuapp.com/)
+[<img src="https://raw.githubusercontent.com/danperrout/tabelataco/master/public/favicon.ico" width="36" height="36" />](http://tabelataco.herokuapp.com/)
+[Live version](http://tabelataco.herokuapp.com/)
 
+--------------------------------
 # Consulta Tabela TACO
 Projeto de consulta a Tabela TACO utilizando JSON interno.
 
