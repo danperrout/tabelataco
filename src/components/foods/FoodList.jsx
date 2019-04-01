@@ -1,7 +1,7 @@
 import React from "react";
 import FoodSummary from "./FoodSummary";
 
-const FoodList = ({ foods }) => {
+const FoodList = ({ foods, originalFoods }) => {
   // ...inside the render() function
 
   var size = 10;
@@ -11,8 +11,8 @@ const FoodList = ({ foods }) => {
 
   return (
     <div className="project-list section">
-      Foram carregados {foods.length} alimentos. Mostrando {items.length}{" "}
-      alimentos.
+      Foram carregados {originalFoods.length} alimentos. Mostrando{" "}
+      {items.length} alimentos.
       {items}
     </div>
   );

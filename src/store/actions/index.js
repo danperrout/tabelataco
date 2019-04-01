@@ -1,4 +1,4 @@
-import { FETCH_GITHUB_DATA, FETCH_FOOD_DATA } from "./types";
+import { FETCH_GITHUB_DATA, FETCH_FOOD_DATA, FILTER_FOOD } from "./types";
 import axios from "axios";
 
 //axios.defaults.headers.get["Access-Control-Allow-Origin"] = "*";
@@ -22,6 +22,16 @@ export const fetchGithubData = () => {
       .catch(error => {
         throw error;
       });
+  };
+};
+
+export const filterFood = newFoodList => {
+  return dispatch => {
+    console.log(newFoodList.length);
+    return dispatch({
+      type: FILTER_FOOD,
+      payload: newFoodList
+    });
   };
 };
 
