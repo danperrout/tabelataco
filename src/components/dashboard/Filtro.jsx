@@ -37,7 +37,7 @@ class Filtro extends Component {
   render() {
     const { searchQuery, groupSearch } = this.state;
 
-    if (groupSearch.length > 0) {
+    if (groupSearch.length > 0 && searchQuery !== "") {
       return (
         <div>
           <SearchBox value={searchQuery} onChange={this.handleSearch} />
