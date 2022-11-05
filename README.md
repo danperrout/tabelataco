@@ -1,6 +1,8 @@
 [<img src="https://raw.githubusercontent.com/danperrout/tabelataco/master/public/favicon.ico" width="36" height="36" />](http://tabelataco.herokuapp.com/)
 [Live version](http://tabelataco.herokuapp.com/)
 
+[![HitCount](https://hits.dwyl.com/Danperrout/Tabelataco.svg?style=flat)](http://hits.dwyl.com/Danperrout/Tabelataco)
+
 ---
 
 # Consulta Tabela TACO
